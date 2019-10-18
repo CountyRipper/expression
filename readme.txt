@@ -1,0 +1,2 @@
+vim connot input Chinese?
+
