@@ -7,7 +7,6 @@ bool expression<Type>::Isoperator(char ch){
     if(ch=='='||ch=='+'||ch=='-'||ch=='*'||ch=='/'||ch=='^'||ch=='%'||ch=='('||ch==')')
         return true;
     else return false;
-
 }
 
 template<class Type>
@@ -20,6 +19,7 @@ int expression<Type>::Opri(char op){
     else if(op=='^') return 4;
     else if(op==')') return 5;
 }
+
 template<class Type>
 bool expression<Type>::Isdigit(char ch){
     if(ch>='0'&&ch<='9') return true;
@@ -30,6 +30,14 @@ template<class Type>
 void expression<Type>::get2Operands(stack<Type> &opnd,Type &a1,Type &a2){
     opnd.pop(a1);//a1获取了opnd的弹出的一个元素
     opnd.pop(a2);
+}
+
+template<class Type>
+char expression<Type>::Getchar(std::istream &instream){
+    char ch;
+    while(ch=(instream.peek())!EOF&&(ch=instream.get()==' '||ch=='\t'));
+        return ch;
+    
 }
 
 template<class Type>
@@ -87,8 +95,9 @@ void expression<Type>::exchangexp(std::ofstream &outfile){
             std::cin.putback(ch)//把ch放回到输入流中
             cin>>operand;//读操作数
             outfile<<operand<<" ";//把文件输出到outfile中
-            ch = std::cin.get();
+            ch = Getchar(); //从输入流中原则上需要跳过空格与制表符
         }
+        // illegal char
         try{
         else if(!Isoperator(ch)){
             throw "非法字符!";
@@ -96,6 +105,19 @@ void expression<Type>::exchangexp(std::ofstream &outfile){
         }
         catch(char *msg){
             std::cerr<<msg<<std::endl;
+        }
+        //compare optrator priori
+        //如果是操作符
+        else{
+            //优先级高或者相等就压栈
+            if(Opri(optrtop)<=Opri(ch)){
+                optr.push(ch);//ch这个操作符进操作符栈
+                std::cin>>ch;//再次从输入流中读取ch;
+            }
+            else if(Opri(optrtop)>Opri(ch)){
+                optr.pop(op);//从栈中把上一个操作符弹给op
+                outfile<<op<<" "; //把运算符op输出到outfile中
+            }
         }
     }
 
