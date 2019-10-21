@@ -3,5 +3,10 @@
   "directory": "G:/codebank/DS/expression/build",
   "command": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe    -g   -o CMakeFiles\\main.dir\\main.cpp.obj -c G:\\codebank\\DS\\expression\\main.cpp",
   "file": "G:/codebank/DS/expression/main.cpp"
+},
+{
+  "directory": "G:/codebank/DS/expression/build",
+  "command": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe    -g   -o CMakeFiles\\main.dir\\expression1.cpp.obj -c G:\\codebank\\DS\\expression\\expression1.cpp",
+  "file": "G:/codebank/DS/expression/expression1.cpp"
 }
 ]

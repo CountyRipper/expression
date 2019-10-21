@@ -519,6 +519,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+expression1.obj: expression1.cpp.obj
+
+.PHONY : expression1.obj
+
+# target to build an object file
+expression1.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression1.cpp.obj
+.PHONY : expression1.cpp.obj
+
+expression1.i: expression1.cpp.i
+
+.PHONY : expression1.i
+
+# target to preprocess a source file
+expression1.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression1.cpp.i
+.PHONY : expression1.cpp.i
+
+expression1.s: expression1.cpp.s
+
+.PHONY : expression1.s
+
+# target to generate assembly for a file
+expression1.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression1.cpp.s
+.PHONY : expression1.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -586,6 +613,9 @@ help:
 	@echo ... package
 	@echo ... test
 	@echo ... rebuild_cache
+	@echo ... expression1.obj
+	@echo ... expression1.i
+	@echo ... expression1.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -6,7 +6,27 @@
 
 #IncludeRegexTransform: 
 
+G:/codebank/DS/expression/expression1.cpp
+expression1.h
+G:/codebank/DS/expression/expression1.h
+
+G:/codebank/DS/expression/expression1.h
+stack1.h
+G:/codebank/DS/expression/stack1.h
+fstream
+-
+istream
+-
+iostream
+-
+
 G:/codebank/DS/expression/main.cpp
 iostream
+-
+expression1.h
+G:/codebank/DS/expression/expression1.h
+
+G:/codebank/DS/expression/stack1.h
+cstdio
 -
 

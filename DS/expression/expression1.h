@@ -4,6 +4,7 @@
 
 #include "stack1.h"
 #include <fstream>
+#include <istream>
 #include <iostream>
 
 template<class Type>
@@ -24,16 +25,16 @@ class expression{
         //计算后缀表达式值,来自于输入文件infile
         static void calexpression(std::ifstream &infile);
 
-        static char Getchar(std::istream &instream);
+        //static char Getchar(std::istream &instream);
 
         
     public:
         //程序启动接口
         static void Run();
         //无参构造函数
-        expression();
+        expression(){};
         //析构函数
-        virtual ~expression();
+        virtual ~expression(){};
 };
 
 
