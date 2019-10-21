@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "G:/codebank/DS/expression/expression1.cpp" "G:/codebank/DS/expression/build/CMakeFiles/main.dir/expression1.cpp.obj"
+  "G:/codebank/DS/expression/expression.cpp" "G:/codebank/DS/expression/build/CMakeFiles/main.dir/expression.cpp.obj"
   "G:/codebank/DS/expression/main.cpp" "G:/codebank/DS/expression/build/CMakeFiles/main.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

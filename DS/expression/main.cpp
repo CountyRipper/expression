@@ -1,10 +1,8 @@
-#include <iostream>
-#include "expression1.h"
+#include "expression.h"
 
 int main(int, char**) {
     char c1;
     expression<double>exp1;
-    
     do{
         std::cout << "input expression:"<<std::endl;
         expression<double>::Run();

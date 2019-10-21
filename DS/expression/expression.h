@@ -25,12 +25,10 @@ class expression{
         //计算后缀表达式值,来自于输入文件infile
         static void calexpression(std::ifstream &infile);
 
-        //static char Getchar(std::istream &instream);
-
-        
+        //static char Getchar(std::istream &instream);      
     public:
         //程序启动接口
-        static void Run();
+        void static Run();
         //无参构造函数
         expression(){};
         //析构函数

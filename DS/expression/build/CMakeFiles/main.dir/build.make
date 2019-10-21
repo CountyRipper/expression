@@ -69,29 +69,29 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
 	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\codebank\DS\expression\main.cpp -o CMakeFiles\main.dir\main.cpp.s
 
-CMakeFiles/main.dir/expression1.cpp.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/expression1.cpp.obj: ../expression1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=G:\codebank\DS\expression\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/expression1.cpp.obj"
-	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\expression1.cpp.obj -c G:\codebank\DS\expression\expression1.cpp
+CMakeFiles/main.dir/expression.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/expression.cpp.obj: ../expression.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=G:\codebank\DS\expression\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/expression.cpp.obj"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\expression.cpp.obj -c G:\codebank\DS\expression\expression.cpp
 
-CMakeFiles/main.dir/expression1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/expression1.cpp.i"
-	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\codebank\DS\expression\expression1.cpp > CMakeFiles\main.dir\expression1.cpp.i
+CMakeFiles/main.dir/expression.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/expression.cpp.i"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\codebank\DS\expression\expression.cpp > CMakeFiles\main.dir\expression.cpp.i
 
-CMakeFiles/main.dir/expression1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/expression1.cpp.s"
-	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\codebank\DS\expression\expression1.cpp -o CMakeFiles\main.dir\expression1.cpp.s
+CMakeFiles/main.dir/expression.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/expression.cpp.s"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\codebank\DS\expression\expression.cpp -o CMakeFiles\main.dir\expression.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.obj" \
-"CMakeFiles/main.dir/expression1.cpp.obj"
+"CMakeFiles/main.dir/expression.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main.exe: CMakeFiles/main.dir/main.cpp.obj
-main.exe: CMakeFiles/main.dir/expression1.cpp.obj
+main.exe: CMakeFiles/main.dir/expression.cpp.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: CMakeFiles/main.dir/linklibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp

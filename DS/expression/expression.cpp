@@ -1,4 +1,4 @@
-#include "expression1.h"
+#include "expression.h"
 
 template<class Type>
 bool expression<Type>::Isoperator(char ch){
@@ -153,7 +153,7 @@ void expression<Type>::exchangexp(std::ofstream &outfile){
 
 template<class Type>
 void expression<Type>::Run(){
-    std::ofstream outfile("exp_text.dat"/*,ios::app*/);//define outfile
+    std::ofstream outfile("exp_text.dat");//define outfile
     exchangexp(outfile);//exchange the mid_expression to ,save the result in outfile
     outfile.close();
     
@@ -161,4 +161,4 @@ void expression<Type>::Run(){
     calexpression(infile);//计算输入流文件中表达式的结果
     infile.close();
     remove("exp_text.dat");
-}
+} 

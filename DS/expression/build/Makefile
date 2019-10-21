@@ -519,32 +519,32 @@ main/fast:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-expression1.obj: expression1.cpp.obj
+expression.obj: expression.cpp.obj
 
-.PHONY : expression1.obj
+.PHONY : expression.obj
 
 # target to build an object file
-expression1.cpp.obj:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression1.cpp.obj
-.PHONY : expression1.cpp.obj
+expression.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression.cpp.obj
+.PHONY : expression.cpp.obj
 
-expression1.i: expression1.cpp.i
+expression.i: expression.cpp.i
 
-.PHONY : expression1.i
+.PHONY : expression.i
 
 # target to preprocess a source file
-expression1.cpp.i:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression1.cpp.i
-.PHONY : expression1.cpp.i
+expression.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression.cpp.i
+.PHONY : expression.cpp.i
 
-expression1.s: expression1.cpp.s
+expression.s: expression.cpp.s
 
-.PHONY : expression1.s
+.PHONY : expression.s
 
 # target to generate assembly for a file
-expression1.cpp.s:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression1.cpp.s
-.PHONY : expression1.cpp.s
+expression.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/expression.cpp.s
+.PHONY : expression.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -613,9 +613,9 @@ help:
 	@echo ... package
 	@echo ... test
 	@echo ... rebuild_cache
-	@echo ... expression1.obj
-	@echo ... expression1.i
-	@echo ... expression1.s
+	@echo ... expression.obj
+	@echo ... expression.i
+	@echo ... expression.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
