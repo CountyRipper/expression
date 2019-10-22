@@ -50,6 +50,8 @@ private:
 		case '*':
 			opnd.push(a1 * a2);
 			break;
+        case '%':
+            opnd.push(a2 % a1);
 		case '/':
 			try
 			{
