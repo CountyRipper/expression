@@ -7,8 +7,8 @@
 #IncludeRegexTransform: 
 
 G:/codebank/DS/expression/expression.h
-stack1.h
-G:/codebank/DS/expression/stack1.h
+stack
+-
 fstream
 -
 istream
@@ -19,8 +19,4 @@ iostream
 G:/codebank/DS/expression/main.cpp
 expression.h
 G:/codebank/DS/expression/expression.h
-
-G:/codebank/DS/expression/stack1.h
-cstdio
--
 
