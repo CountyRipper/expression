@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/DS_exp/DS/expression/expression.h
+stack
+-
+fstream
+-
+istream
+-
+iostream
+-
+
+D:/DS_exp/DS/expression/main.cpp
+expression.h
+D:/DS_exp/DS/expression/expression.h
+

@@ -42,10 +42,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\pc\Documents\cpp\expression
+CMAKE_SOURCE_DIR = D:\DS_exp\DS\expression
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pc\Documents\cpp\expression
+CMAKE_BINARY_DIR = D:\DS_exp\DS\expression
 
 # Utility rule file for ExperimentalConfigure.
 
@@ -70,6 +70,6 @@ CMakeFiles/ExperimentalConfigure.dir/clean:
 .PHONY : CMakeFiles/ExperimentalConfigure.dir/clean
 
 CMakeFiles/ExperimentalConfigure.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pc\Documents\cpp\expression C:\Users\pc\Documents\cpp\expression C:\Users\pc\Documents\cpp\expression C:\Users\pc\Documents\cpp\expression C:\Users\pc\Documents\cpp\expression\CMakeFiles\ExperimentalConfigure.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\DS_exp\DS\expression D:\DS_exp\DS\expression D:\DS_exp\DS\expression D:\DS_exp\DS\expression D:\DS_exp\DS\expression\CMakeFiles\ExperimentalConfigure.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalConfigure.dir/depend
 

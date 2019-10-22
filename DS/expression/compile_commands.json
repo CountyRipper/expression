@@ -1,7 +1,7 @@
 [
 {
-  "directory": "C:/Users/pc/Documents/cpp/expression",
-  "command": "C:\\MinGW\\bin\\g++.exe    -g   -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\pc\\Documents\\cpp\\expression\\main.cpp",
-  "file": "C:/Users/pc/Documents/cpp/expression/main.cpp"
+  "directory": "D:/DS_exp/DS/expression",
+  "command": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe    -g   -o CMakeFiles\\main.dir\\main.cpp.obj -c D:\\DS_exp\\DS\\expression\\main.cpp",
+  "file": "D:/DS_exp/DS/expression/main.cpp"
 }
 ]

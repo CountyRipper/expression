@@ -47,10 +47,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\pc\Documents\cpp\expression
+CMAKE_SOURCE_DIR = D:\DS_exp\DS\expression
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pc\Documents\cpp\expression
+CMAKE_BINARY_DIR = D:\DS_exp\DS\expression
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\pc\Documents\cpp\expression
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/pc/Documents/cpp/expression/CPackSourceConfig.cmake
+	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake D:/DS_exp/DS/expression/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -112,9 +112,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pc\Documents\cpp\expression\CMakeFiles C:\Users\pc\Documents\cpp\expression\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\DS_exp\DS\expression\CMakeFiles D:\DS_exp\DS\expression\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pc\Documents\cpp\expression\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\DS_exp\DS\expression\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

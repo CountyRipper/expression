@@ -44,14 +44,17 @@ private:
 		case '+':
 			opnd.push(a1 + a2);
 			break;
-		case '-':
+		case '-':、
 			opnd.push(a1 + a2);
 			break;
 		case '*':
 			opnd.push(a1 * a2);
 			break;
-        case '%':
-            opnd.push(a2 % a1);
+        case '%':{
+			int a11=(int) a1;
+			int a22=(int) a2;
+            opnd.push((double)(a11 % a22));
+		}
 		case '/':
 			try
 			{
@@ -194,5 +197,4 @@ public:
 };
 
 
-#endif
-
+#endif
