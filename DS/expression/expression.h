@@ -44,7 +44,7 @@ private:
 		case '+':
 			opnd.push(a1 + a2);
 			break;
-		case '-':、
+		case '-':
 			opnd.push(a1 + a2);
 			break;
 		case '*':
@@ -197,4 +197,4 @@ public:
 };
 
 
-#endif
+#endif
