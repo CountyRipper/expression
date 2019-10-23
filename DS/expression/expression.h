@@ -55,6 +55,7 @@ private:
 			int a11=(int) a1;
 			int a22=(int) a2;
             opnd.push((double)(a11 % a22));
+			break;
 		}
 		case '/':
 			try
@@ -69,10 +70,11 @@ private:
 			break;
 		case '^': {
 			int a11 = a1;
+			int a12 = a1;
 			int a22 = a2;
-			while (a22 >= 1) {
+			while (a22 > 1) {
 				
-				a11 *= a11;
+				a11 *= a12;
 				a22--;
 			}
 			opnd.push(a11);
@@ -110,7 +112,6 @@ private:
 					std::cin >> ch; //从输入流中原则上需要跳过空格与制表符
 				}
 				// illegal char
-
 				else if (!Isoperator(ch)) {
 					throw "illegal char!";
 				}
@@ -121,8 +122,9 @@ private:
 					optr.push(ch);
 					std::cin>>ch;
 				}
-				else if((optrtop==')'&&ch=='(')||(optrtop=='('&&ch=='=')||(optrtop=='='&&ch==')'))
+				else if((optrtop==')'&&ch=='(')||(optrtop=='('&&ch=='=')||(optrtop=='='&&ch==')')){
 					throw "expression failed!";
+				}
                 else if(ch=='('){
                     	optr.push(ch);//ch这个操作符进操作符栈
 						preop=ch;
@@ -139,6 +141,9 @@ private:
 					preop=ch;
                     std::cin >> ch;
                 }
+				else if(Isoperator(preop)&&preop==ch){
+					throw "expression failed!";
+				}
                 //当不等于()时
 				else {
 					//优先级高或者相等就压栈
