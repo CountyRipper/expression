@@ -116,12 +116,12 @@ private:
 				}
 				//compare optrator priori
 				//如果是操作符
-				if((preop=='='||preop=='(')&&(ch=='+'||ch=='-')){
+				else if((preop=='='||preop=='(')&&(ch=='+'||ch=='-')){
 					outfile << '0'<<' ';
 					optr.push(ch);
 					std::cin>>ch;
 				}
-				if((optrtop==')'&&ch=='(')||(optrtop=='('&&ch=='=')||(optrtop=='='&&ch==')'))
+				else if((optrtop==')'&&ch=='(')||(optrtop=='('&&ch=='=')||(optrtop=='='&&ch==')'))
 					throw "expression failed!";
                 else if(ch=='('){
                     	optr.push(ch);//ch这个操作符进操作符栈
