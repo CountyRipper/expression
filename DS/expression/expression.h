@@ -6,6 +6,7 @@
 #include <fstream>
 #include <istream>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -33,8 +34,8 @@ private:
 	}
 	//取出两个操作数,从堆栈中
 	static void get2Operands(stack<Type>& opnd, Type& a1, Type& a2) {
-		a1 = opnd.top(); opnd.pop();//a1获取了opnd的弹出的一个元素
-		a2 = opnd.top(); opnd.pop();
+		a2 = opnd.top(); opnd.pop();//a1获取了opnd的弹出的一个元素
+		a1 = opnd.top(); opnd.pop();
 	};
 
 	//形成运算指令送入opnd栈中
@@ -45,7 +46,7 @@ private:
 			opnd.push(a1 + a2);
 			break;
 		case '-':
-			opnd.push(a1 + a2);
+			opnd.push(a1 - a2);
 			break;
 		case '*':
 			opnd.push(a1 * a2);
@@ -58,8 +59,8 @@ private:
 		case '/':
 			try
 			{
-				if (a2 == 0) throw "a2 = 0";
-				else opnd.push(a2 / a1);
+				if (a1 == 0) throw "a1 = 0";
+				else opnd.push(a1 / a2);
 			}
 			catch (const char* e)
 			{
@@ -88,10 +89,13 @@ private:
 		stack<char>optr;
 		//输入的字符ch和操作符栈顶的操作符optrtop以及操作符op
 		char ch, optrtop, op;
+		//preop通过检测ch的上一个字符来检测表达式输入是否有问题和支持单目运算
+		char preop;
 		//操作数
 		Type operand;
 		//先压入'='确保安全
 		optr.push('=');
+		preop = '=';//preop初始化为=
 		optrtop = optr.top();//optrtop取得optr栈顶元素
 		//设置循环，在输入输出流中读取字符
 		std::cin>>ch;
@@ -102,18 +106,26 @@ private:
 					std::cin.putback(ch);//把ch放回到输入流中
 					std::cin >> operand;//读操作数
 					outfile << operand << " ";//把文件输出到outfile中
+					preop = '0';//前一字符不是操作符，规定preop为0
 					std::cin >> ch; //从输入流中原则上需要跳过空格与制表符
 				}
 				// illegal char
 
 				else if (!Isoperator(ch)) {
-					throw "非法字符!";
+					throw "illegal char!";
 				}
-
 				//compare optrator priori
 				//如果是操作符
+				if((preop=='='||preop=='(')&&(ch=='+'||ch=='-')){
+					outfile << '0'<<' ';
+					optr.push(ch);
+					std::cin>>ch;
+				}
+				if((optrtop==')'&&ch=='(')||(optrtop=='('&&ch=='=')||(optrtop=='='&&ch==')'))
+					throw "expression failed!";
                 else if(ch=='('){
                     	optr.push(ch);//ch这个操作符进操作符栈
+						preop=ch;
 						std::cin >> ch;//再次从输入流中读取ch;
                 }
                 else if(ch==')'){
@@ -124,16 +136,18 @@ private:
                         optrtop=optr.top();
                     }
                     optr.pop();//把()舍去
+					preop=ch;
                     std::cin >> ch;
                 }
                 //当不等于()时
 				else {
 					//优先级高或者相等就压栈
-					if (Opri(optrtop) <= Opri(ch)) {
+					if (Opri(optrtop) < Opri(ch)) {
 						optr.push(ch);//ch这个操作符进操作符栈
+						preop = ch;
 						std::cin >> ch;//再次从输入流中读取ch;
 					}
-					else if (Opri(optrtop) > Opri(ch)) {
+					else if (Opri(optrtop) >= Opri(ch)) {
 						op = optr.top();
 						optr.pop();//从栈中把上一个操作符弹给op
 						outfile << op << ' '; //把运算符op输出到outfile中
@@ -146,8 +160,9 @@ private:
 				}
 				optrtop = optr.top();//获取当前操作符栈的栈顶元素         
 			}
-			catch (char* msg) {
+			catch (const char* msg) {
 				std::cerr << msg << std::endl;
+				break;
 			}
 			
 		}
@@ -173,8 +188,10 @@ private:
 				opnd.push(operand);//将operand入opnd栈
 			}
 		}
-		operand=opnd.top();
-		std::cout << operand << std::endl;
+		if(!opnd.empty()){
+			operand=opnd.top();
+			std::cout << operand << std::endl;
+		}
 	}
 
 	//static char Getchar(std::istream &instream);      
@@ -184,8 +201,14 @@ public:
 		std::ofstream outfile("exp_text.dat");//define outfile
 		exchangexp(outfile);//exchange the mid_expression to ,save the result in outfile
 		outfile.close();
-
+		
 		std::ifstream infile("exp_text.dat");
+		string st1;
+		std::getline(infile,st1);
+		std::cout<<st1<<std::endl;
+
+		infile.seekg(0);//把文件的指针指向文件开头
+
 		calexpression(infile);//计算输入流文件中表达式的结果
 		infile.close();
 		//remove("exp_text.dat");

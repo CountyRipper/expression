@@ -1,9 +1,11 @@
 #include "expression.h"
 
+
 int main(int, char**) {
     char c1;
     expression<double>exp1;
     do{
+        std::cout <<"It's a expression calculator"<<std::endl;
         std::cout << "input expression:"<<std::endl;
         expression<double>::Run();
         std::cout<<"continue?(y/n)"<<std::endl;
